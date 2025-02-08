@@ -20,6 +20,9 @@ app.use(cors({
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+app.get('/',(req,res)=>{
+    res.send("welcome")
+})
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 
